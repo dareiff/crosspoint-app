@@ -61,6 +61,12 @@ final class DeviceSettings {
     /// Destination folder for WallpaperX (wallpapers). Default: "sleep".
     var wallpaperFolder: String
 
+    /// Destination root folder for RSS feed articles. Default: "feed".
+    /// Articles are organized into per-domain subfolders: `<feedFolder>/<domain>/`.
+    /// Renaming this (e.g. to "aaa-feed") lets users surface it at the top of
+    /// the device's Files list.
+    var feedFolder: String = "feed"
+
     // MARK: - Language
 
     /// BCP-47 language code, or empty string for system default.
@@ -90,6 +96,7 @@ final class DeviceSettings {
         customIP: String = "",
         convertFolder: String = "content",
         wallpaperFolder: String = "sleep",
+        feedFolder: String = "feed",
         showFileManager: Bool = false,
         languageCode: String = ""
     ) {
@@ -97,6 +104,7 @@ final class DeviceSettings {
         self.customIP = customIP
         self.convertFolder = convertFolder
         self.wallpaperFolder = wallpaperFolder
+        self.feedFolder = feedFolder
         self.showFileManager = showFileManager
         self.languageCode = languageCode
     }

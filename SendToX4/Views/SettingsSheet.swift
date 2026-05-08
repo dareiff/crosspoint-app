@@ -176,6 +176,21 @@ struct SettingsSheet: View {
                 }
             }
             .padding(.vertical, 2)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(loc(.rssFeedSectionLabel))
+                    .font(.subheadline.weight(.medium))
+                HStack {
+                    Image(systemName: "folder")
+                        .foregroundStyle(.secondary)
+                    TextField("feed", text: $settings.feedFolder)
+                        .autocorrectionDisabled()
+                        #if os(iOS)
+                        .textInputAutocapitalization(.never)
+                        #endif
+                }
+            }
+            .padding(.vertical, 2)
         } header: {
             Text(loc(.featureFolders))
         } footer: {

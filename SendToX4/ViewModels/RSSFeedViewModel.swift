@@ -313,8 +313,10 @@ final class RSSFeedViewModel {
                 modelContext.insert(newArticle)
                 article = newArticle
 
-                // Destination folder: /feed/<domain>/
-                let destFolder = "feed/\(rssArticle.domain)"
+                // Destination folder: /<feedFolder>/<domain>/
+                let feedRoot = settings.feedFolder.trimmingCharacters(in: CharacterSet(charactersIn: "/ "))
+                let safeFeedRoot = feedRoot.isEmpty ? "feed" : feedRoot
+                let destFolder = "\(safeFeedRoot)/\(rssArticle.domain)"
 
                 if deviceVM.isConnected && !deviceVM.isBatchDeleting {
                     // Send directly

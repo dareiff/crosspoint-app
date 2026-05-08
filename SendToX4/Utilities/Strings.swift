@@ -135,6 +135,7 @@ enum L10n {
         case featureFolders
         case convertSectionLabel
         case wallpaperXSectionLabel
+        case rssFeedSectionLabel
         case featureFoldersDescription
         case testConnection
         case connectedWithInfo
@@ -604,7 +605,8 @@ enum L10n {
         .featureFolders: "Feature Folders",
         .convertSectionLabel: "Convert",
         .wallpaperXSectionLabel: "WallpaperX",
-        .featureFoldersDescription: "Each feature uploads to its own folder on the device (e.g. /%@/). Tap a field to change the destination.",
+        .rssFeedSectionLabel: "RSS Feed",
+        .featureFoldersDescription: "Each feature uploads to its own folder on the device (e.g. /%@/). Tap a field to change the destination. Tip: prefix with letters like \"aaa-\" to surface a folder at the top of Files.",
         .testConnection: "Test Connection",
         .connectedWithInfo: "Connected (%@)",
         .notReachable: "Not reachable",
@@ -1066,7 +1068,8 @@ enum L10n {
         .featureFolders: "功能文件夹",
         .convertSectionLabel: "转换",
         .wallpaperXSectionLabel: "壁纸X",
-        .featureFoldersDescription: "每个功能上传到设备上各自的文件夹（例如 /%@/）。点击字段更改目标位置。",
+        .rssFeedSectionLabel: "RSS 订阅",
+        .featureFoldersDescription: "每个功能上传到设备上各自的文件夹（例如 /%@/）。点击字段更改目标位置。提示：用字母前缀（如 \"aaa-\"）可让文件夹排在「文件」列表顶部。",
         .testConnection: "测试连接",
         .connectedWithInfo: "已连接（%@）",
         .notReachable: "无法连接",
